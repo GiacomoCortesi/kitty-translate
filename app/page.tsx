@@ -1,11 +1,11 @@
-"use client";
-import React from 'react';
+'use client'
+import React from 'react'
 import Kitty from '@/app/kitty/page'
 
 export default function Home() {
   return (
-      <main>
-        <Kitty/>
-      </main>
-  );
+    <main>
+      <Kitty />
+    </main>
+  )
 }

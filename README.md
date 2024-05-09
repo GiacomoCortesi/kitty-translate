@@ -1,3 +1,26 @@
+## KITTY TRANSLATE
+
+Kitty Translate is an AI cat assistant and translation engine that allows cat-owners to better understand and communicate with their beloved felines.
+
+Play with it live on [kitty translate demo](https://kitty-translate.vercel.app/)
+
+It uses nextjs react framework and tailwind/flowbite for styling.
+
+Cat translation offer two modes:
+
+- base: leverage chat gpt API with a custom prompt
+- supreme: leverage handcrafted fixed rules
+
+Text to speech uses Hugging Face API.
+
+Make sure to provide your own tokens in the .env configuration as shown in .env.example sample file.
+
+The project uses:
+
+- prettier for code formatting
+- eslint for code linting
+- husky for performing linting and formatting as a pre-commit hook
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

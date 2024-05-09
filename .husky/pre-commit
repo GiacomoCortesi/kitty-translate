@@ -1,0 +1,4 @@
+npm run format:fix || { echo "failed formatting code, check prettier settings"; exit 1; }
+npm run lint:fix || { echo "failed linting code, fix suggested errors and try again"; exit 1; }
+
+echo "pre-commit script successfully executed"
