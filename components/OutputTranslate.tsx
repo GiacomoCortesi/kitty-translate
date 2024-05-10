@@ -9,7 +9,6 @@ const OutputTranslate = ({ text }: OutputTranslateProps) => {
   return (
     <div
       style={{
-        margin: '1.25em',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -36,7 +35,7 @@ const OutputTranslate = ({ text }: OutputTranslateProps) => {
           style={{
             padding: '0.85em',
             width: '80%',
-            minHeight: '7em',
+            minHeight: '4em',
             border: 'solid',
             borderRadius: '0.75em',
           }}

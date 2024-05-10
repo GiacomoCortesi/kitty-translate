@@ -25,7 +25,7 @@ const CatFacts = () => {
     fact && (
       <div
         style={{ display: 'flex', margin: '0.25em', flexDirection: 'column' }}
-        className={'max-w-[80vh]'}
+        className={'max-w-[90vh]'}
       >
         <div
           style={{

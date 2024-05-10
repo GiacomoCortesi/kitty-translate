@@ -59,8 +59,10 @@ export default function Page() {
           onTranslateButtonClick={onTranslateButtonClick}
           onToggle={() => setToggle(!toggle)}
         />
+        <div className={'col-span-3'}>
+          <OutputTranslate text={translatedText} />
+        </div>
       </div>
-      <OutputTranslate text={translatedText} />
       <div className={'flex justify-center'}>
         <CatFact />
       </div>

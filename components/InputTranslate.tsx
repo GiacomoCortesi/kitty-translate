@@ -6,7 +6,7 @@ interface InputTranslateProps {
   onToggle: any
 }
 
-export const InputTranslate = ({
+const InputTranslate = ({
   onTranslateButtonClick,
   onTextInputChange,
   onToggle,
