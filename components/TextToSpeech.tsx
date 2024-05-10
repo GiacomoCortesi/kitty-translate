@@ -36,7 +36,7 @@ export function TextToSpeech({ data }: TextToSpeechProps) {
       // Convert ArrayBuffer to Blob and create a URL for the audio
       const blob = new Blob([data], { type: 'audio/mpeg' })
       const audioUrl = URL.createObjectURL(blob)
-      var audio = new Audio(audioUrl)
+      const audio = new Audio(audioUrl)
       await audio.play()
       setAudioUrl(audioUrl)
       setIsLoading(false)

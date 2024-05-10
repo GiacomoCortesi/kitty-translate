@@ -17,7 +17,6 @@ export const translateBase = (message: string): Promise<string> => {
     model: 'gpt-3.5-turbo',
     messages: [{ role: 'user', content: `${promptPrefix} ${message}` }],
   }
-
   console.log('data to send', data)
 
   return fetch(url, {

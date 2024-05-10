@@ -14,7 +14,6 @@ export default function Page() {
   const [inputText, setInputText] = useState('')
   const [toggle, setToggle] = useState(false)
   const [translatedText, setTranslatedText] = useState('')
-
   const onTranslateButtonClick = () => {
     console.log('translate button clicked, translating...')
     if (inputText) {
