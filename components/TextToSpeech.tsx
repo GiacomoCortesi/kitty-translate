@@ -72,7 +72,7 @@ export function TextToSpeech({ data }: TextToSpeechProps) {
         className='focus:ring-amber-600font-medium me-2 inline-flex items-center rounded-lg p-2.5 text-center text-sm text-black focus:outline-none focus:ring-4 dark:hover:bg-amber-300'
       >
         <svg
-          className='h-6 w-6 text-gray-800 dark:text-white'
+          className={`h-6 w-6 dark:text-white ${isLoading ? 'text-gray-400' : 'text-gray-800'}`}
           aria-hidden='true'
           xmlns='http://www.w3.org/2000/svg'
           fill='currentColor'

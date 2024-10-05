@@ -14,20 +14,21 @@ export default function Page() {
   const [inputText, setInputText] = useState('')
   const [toggle, setToggle] = useState(false)
   const [translatedText, setTranslatedText] = useState('')
+  const [loading, setLoading] = useState(false)
+
   const onTranslateButtonClick = () => {
     console.log('translate button clicked, translating...')
     if (inputText) {
       console.log('input text', inputText)
+      setLoading(true)
       if (!toggle) {
-        translateBase(inputText)
-          .then((text: string) => {
-            setTranslatedText(text)
-          })
-          .catch((error: any) => {
-            console.log(error)
-          })
+        translateBase(inputText).then((text: string) => {
+          setTranslatedText(text)
+          setLoading(false)
+        })
       } else {
         setTranslatedText(translateSupreme(inputText))
+        setLoading(false)
       }
     } else {
       setTranslatedText('')
@@ -39,7 +40,7 @@ export default function Page() {
   }
   return (
     <div>
-      <div className={'grid grid-cols-3 gap-4'}>
+      <div className={'grid lg:grid-cols-3 gap-4'}>
         <CatLogo />
         <div
           style={{
@@ -48,20 +49,21 @@ export default function Page() {
             alignItems: 'center',
           }}
         >
-          <Image
-            alt={'kitty translate'}
-            src={kittyLogo}
-            style={{ width: '18em' }}
+          <InputTranslate
+            loading={loading}
+            onTextInputChange={onTextInputChange}
+            onTranslateButtonClick={onTranslateButtonClick}
+            onToggle={() => setToggle(!toggle)}
           />
         </div>
-        <InputTranslate
-          onTextInputChange={onTextInputChange}
-          onTranslateButtonClick={onTranslateButtonClick}
-          onToggle={() => setToggle(!toggle)}
+        <Image
+          alt={'kitty translate'}
+          src={kittyLogo}
+          style={{ width: '18em', margin: 'auto' }}
         />
-        <div className={'col-span-3'}>
-          <OutputTranslate text={translatedText} />
-        </div>
+      </div>
+      <div>
+        <OutputTranslate text={translatedText} />
       </div>
       <div className={'flex justify-center'}>
         <CatFact />

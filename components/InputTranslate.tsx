@@ -4,12 +4,14 @@ interface InputTranslateProps {
   onTranslateButtonClick: any
   onTextInputChange: any
   onToggle: any
+  loading: boolean
 }
 
 const InputTranslate = ({
   onTranslateButtonClick,
   onTextInputChange,
   onToggle,
+  loading,
 }: InputTranslateProps) => {
   return (
     <div
@@ -47,6 +49,7 @@ const InputTranslate = ({
           onChange={onTextInputChange}
         ></Textarea>
         <Button
+          disabled={loading}
           onClick={onTranslateButtonClick}
           className={
             'mb-2 me-2 rounded-lg bg-gradient-to-br from-pink-500 to-orange-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-pink-200 dark:focus:ring-pink-800'
