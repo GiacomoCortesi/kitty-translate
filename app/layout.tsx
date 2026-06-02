@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import './globals.css'
 import KittyNavBar from '@/components/KittyNavBar'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <KittyNavBar />
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   )
